@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<!-- <<<<<<<<<<<<<<<<<<<<<<    Today we are going to style the Functions used in CSS    >>>>>>>>>>>>>>>>>>>> -->
+
+  <style>
+
+    /* GENERAL SETT */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        --FS-SIZE: min(2.25rem, 3vh);
+        --FS-SIZE-SM:1rem;
+        --TXT-COLOR:whitesmoke;
+        --BG-COLOR:rgb(12, 12, 133);
+        --BG-NAV:rgb(204, 204, 191);
+        --RD-GRADIENT: radial-gradient(white, rgb(51, 48, 48));
+    }
+    
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        font-size: var(--FS-SIZE);
+        background-image:var(--RD-GRADIENT);
+        padding: 0.5rem;
+    }
+
+ 
+    h2 {
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+
+
+    header,
+    footer {
+
+        color: var(--TXT-COLOR);
+        background-color:var(--BG-COLOR);
+    }
+
+    header,
+    nav,
+    
+    footer {
+        display: grid;
+        place-content: center;
+        padding: 0.5rem;
+    }
+
+    nav{
+        font-size:var(--FS-SIZE) ;
+        background-color:var(--BG-NAV);
+
+    }
+    header{
+        top: 0;
+        position: sticky;
+    }
+
+    footer {
+        bottom:0;
+        position: sticky;
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     This  is for google link     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    }
+    a:any-link{
+        text-decoration: none;
+        color: darkred;
+    }
+
+    a:hover,
+    a:focus {
+        /*  filter: brightness(150%); */                /* IT GLOWS UP  */
+        filter: hue-rotate(180deg);                    /* GIVE ANY DEG IT CHANGES ACCORDING TO IT */
+    }
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     THIS ARE FOR THE ASIDE BARS      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+        
+    main aside{
+        background-color: hsla(0, 0%, 20% , 0.8);
+        color: var(--TXT-COLOR);
+        font-size: var(--FS-SIZE-SM);
+        font-size: italic;
+        padding: 10px;
+
+    }
+
+       /* HERE WHEN the screen size is 576 or more than it the aside bar stays in right side  */
+    @media screen and (min-width: 576px) {
+        main {
+            flex-flow: row nowrap;  /* since it is in row it comes in next to my heading */
+            justify-content:space-between;
+
+        }
+
+        main section {
+            width: calc(70% - 5px);
+        }                             /* HERE 70% + 30% =100%  but since it is -5 in both the section and aside therefore there will be 10px gap i between them*/
+        main aside {
+            width: calc(30% - 5px);
+
+        }
+        
+    }
+
+    .content{
+        margin-top: 20px
+    }
+
+    .toolkit{
+        border-bottom: 1px dashed orange;
+        position: relative;
+        color: rgb(23, 238, 20);
+
+    }
+
+    .toolkit:hover:before{
+        content: attr(dheeraj);
+        position: absolute;
+        top: -30px;
+        white-space: nowrap;
+        background-color:rgba(38, 37, 37, 0.942);
+        padding: 7px;
+        border-radius: 15px;
+    }
+       
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     THIS IS FOR THE DARK OR LIGHT MODE      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+                                                   /* You just need to change the (preferrs-color-scheme: light!!! <<<) */
+
+    @media(prefers-color-scheme: dark ) {
+        :root{
+        --TXT-COLOR:whitesmoke;
+        --BG-COLOR:rgb(234, 76, 40);
+        --BG-NAV:rgb(233, 236, 57);
+        --RD-GRADIENT: radial-gradient(white,rgb(124, 226, 228) );
+        }
+
+    }
+
+  </style>
+<body>
+    <header>
+        <h1>Heading</h1>
+
+
+    </header>
+    <nav>
+        <h3>Nav</h3>
+    </nav>
+
+    <main>
+        <section>
+            <h2>
+                My Heading
+            </h2>
+            <p class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia, placeat, eius in sit aliquam illum minima earum vero alias quisquam? Labore incidunt voluptatum minima maxime nihil quis cupiditate mollitia.
+            </p>
+            <br>
+            <a href="http://www.Google.com">Google</a>
+        </section>
+
+        <aside>
+            <h2>Aside</h2>
+            <p class="content"><span class="toolkit" dheeraj="this is latin">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Rerum architecto repellat eligendi quaerat aliquam dicta maiores atque delectus voluptas tempore soluta totam, accusantium aliquid quod, unde corrupti voluptates pariatur itaque.</p>
+
+        </aside>
+
+
+    </main>
+
+    <footer>
+        <h1> Footer</h1>
+    </footer>
+
+    
+</body>
+</html>
