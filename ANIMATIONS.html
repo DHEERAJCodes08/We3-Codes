@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATIONS IN CSS</title>
+</head>
+  <!-- Today we are going to learn about animatin transition and transform properties!!! -->
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 1.5rem;
+
+    }
+
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    main{
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+
+    div{
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+/*        display: flex;
+        justify-content: center;
+        align-items: center;  */
+        display: grid;
+        place-content: center;
+        
+    }
+
+    div:first-child{
+        background-color: dodgerblue;
+    /*     transform: translateX(-50%); */  /* it moves to -50%  to left of the aling of the div !!!   the negitive no moves to left!!*/
+           /* transform: rotateX(180deg); */
+          /*  transform: scaleX(120%); */
+        /*   transform: skewX(-10deg); */
+    }
+
+
+    div:nth-child(2){
+        background-color: yellow;
+    /*     transform: translateY(-2rem); */  /* translate Y moves up and down  / * translate x moves right and left */ 
+        /*     transform: rotateY(180deg); */
+        /* transform: scaleY(120%); */
+        /* transform: skew(10deg); */
+    }
+
+
+    div:last-child{
+        background-color:green;
+    /*     transform: translate(100%, -2rem); */
+        /* transform: rotateZ(135deg); */
+        /* transform: scale(50%, 50%); */
+        /* transform: skew(-10deg, -10deg); */
+    }
+
+    div:hover{
+        background-color: midnightblue;
+        transition-property: background-color,transform;
+        transition-duration:2s, 3s ;
+        transition-delay: 0.5s;
+        transition-timing-function: ease;  /* rotates faster */
+       /*  transition: all 2s 0.5s; */  /* SHORTHAND PROPERTY */
+    }
+
+    div:last-child:hover {
+        transform: rotate(180deg);
+    }
+
+    .animate{
+        animation-name:rool ;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-delay:1s ;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;/* switch to the final state color  */
+       /*  animation: 5s ease-in-out 1s  2 forwards rool; */  /* Short hand property */
+    }
+
+    @keyframes rool {
+        0%{
+            transform: translateX(0);
+        }
+        33%{
+
+            transform: translateX(600px) rotate(180deg);
+
+        }
+
+
+        66%{
+            transform: translateX(-600px) rotate(-180deg);
+        }
+        
+        100%{
+            transform: translateX(0);
+            background-color: rebeccapurple;
+        }
+    }
+
+  </style>
+
+
+
+<body>
+
+    <main>
+        <div class="square">😁</div>
+        <div class="square">😒</div>
+        <div class="square animate">😉</div>
+    </main>
+
+    
+</body>
+</html>
