@@ -1,0 +1,73 @@
+h1{
+    margin: 0px;
+    margin-bottom:10px ;
+    text-align: center;
+    text-shadow: rgb(201, 112, 228) 2px 2px 1px;
+    font-size: 70px;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: rgb(0, 148, 211);
+    padding-right: 20px;
+    letter-spacing: 8px;
+
+
+}
+nav a{
+    border: 0px;
+    border-radius:0px 7px 0px 7px ;
+    text-decoration: none;
+    color:white ;
+    padding: 4px 20px 4px 20px;
+    float: left;
+    text-align:center;
+    font-size: 40px;
+    margin: 0px 47px 0px 47px;
+    
+
+}
+nav{
+    border: 3px solid rgb(43, 139, 218);
+    background-color: rgba(0, 0, 0, 0.931);
+    overflow: hidden;
+ 
+}
+nav :hover{
+    color:coral;
+}
+*{
+    box-sizing: border-box;
+
+}
+
+.video{
+margin: 15px;
+
+}
+.video iframe{
+
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 3px;
+
+    margin: 5px;
+}
+img{
+    width: 95px;
+    height: 95px;
+    padding: 2px 2px 0px 2px;
+    border: 2px solid  rgba(37, 141, 206, 0.954);
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-right: 9px;
+    
+}
+.head img{
+    width: 100%;
+    height:2%;
+    border: 5px solid  #f69d3c;
+    border-radius: 5px;
+}
+body{
+    text-align: center;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
