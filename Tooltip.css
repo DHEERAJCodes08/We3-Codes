@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+main{
+    min-height: 100vh;
+    padding: 100px;
+}
+
+section{
+    margin: 100px;
+}
+
+
+.tooltip{
+   position:relative;
+    height: 60px;
+    width: 250px;
+    background: #f2395a;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    margin: 0 auto;
+    
+}
+
+
+/* This is for tooltip top */
+
+.tooltip.top::before{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.4em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    content: attr(title);
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translate(-50%);
+
+
+}
+
+.tooltip.top:hover::before,
+.tooltip.top:hover::after{
+    display: inline-block;
+}
+
+.tooltip.top::after{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 0; 
+    height: 0;
+    border: 5px solid transparent;
+    content: "";
+    bottom: 100%;
+    left: 50%;
+    border-top-color: rgba(0, 0, 0, 0.8);
+
+
+
+
+}
+/* This is  for tooltip right*/
+
+.tooltip.right::before{
+    position: absolute;
+    display: none;
+    z-index: 2;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    content: attr(title);
+    line-height: 1.4em;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+
+
+
+
+.tooltip.right:hover::before,
+.tooltip.right:hover::after{
+    display: inline-block;
+
+}
+
+.tooltip.right::after{
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    display: none;
+    border: 5px solid transparent;
+    content: "";
+    border-top-color:rgba(0, 0, 0, 0.8);
+    top: 44%;
+    left:100%;
+    transform: rotate(90deg);
+
+
+}
+
+/*  This is for tooltip bottom */
+
+.tooltip.bottom::before{
+    position: absolute;
+    display: none;
+    z-index: 2;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    content: attr(title);
+    line-height: 1.4em;
+    top: calc(100% + 9px);
+    left: 50%;
+    transform: translate(-50%);
+
+
+}
+
+
+
+
+
+.tooltip.bottom:hover::before,
+.tooltip.bottom:hover::after{
+    display: inline-block;
+
+}
+
+.tooltip.bottom::after{
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    display: none;
+    border: 5px solid transparent;
+    content: "";
+    border-top-color:rgba(0, 0, 0, 0.8);
+    top: 100%;
+    left: 50%;
+    transform: rotate(180deg);
+
+
+
+}
+
+/*  This is for tool tip Left */
+.tooltip.left::before{
+    position: absolute;
+    display: none;
+    z-index: 2;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    content: attr(title);
+    line-height: 1.4em;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+
+
+
+}
+
+
+
+
+
+.tooltip.left:hover::before,
+.tooltip.left:hover::after{
+    display: inline-block;
+
+}
+
+.tooltip.left::after{
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    display: none;
+    border: 5px solid transparent;
+    content: "";
+    border-top-color:rgba(0, 0, 0, 0.8);
+    top: 43%;
+    right: 100%;
+    
+    transform: rotate(270deg);
+
+
+
+}
